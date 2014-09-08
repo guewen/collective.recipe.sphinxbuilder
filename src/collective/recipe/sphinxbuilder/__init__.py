@@ -137,7 +137,7 @@ class Recipe(object):
                                           ('sphinx-build', 'sphinx', 'main'),
                                           ('sphinx-apidoc', 'sphinx.apidoc', 'main'),
                                           ('sphinx-autogen', 'sphinx.ext.autosummary.generate', 'main')], ws,
-                                         self.buildout[self.buildout['buildout']['python']]['executable'],
+                                         sys.executable,
                                          self.bin_dir, **egg_options)
 
         # patch sphinx-build script
